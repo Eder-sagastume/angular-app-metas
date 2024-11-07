@@ -4,36 +4,36 @@
 @tailwind utilities;
 
 .boton {
-  @apply text-sm font-bold py-1 px-4 rounded-full;
+    @apply text-sm font-bold py-1 px-4 rounded-full;
 }
 
 .tarjeta {
-  @apply rounded-xl m-4 text-gray-700 text-xs mx-4 bg-white overflow-hidden;
+    @apply rounded-xl m-4 text-gray-700 text-xs mx-4 bg-white shadow-gray-300 shadow-md overflow-hidden;
 }
 
 .boton--negro {
-  @apply text-white hover:bg-gray-800 bg-gray-700;
-  box-shadow: 5px 6px 12px 3px rgba(83, 83, 100, 0.6),
+    @apply text-white hover:bg-gray-800 bg-gray-700;
+    box-shadow: 5px 6px 12px 3px rgba(83, 83, 100, 0.6), -6px 4px 9px -9px rgb(0, 0, 0);
 }
 
 .boton--rojo {
-  @apply text-red-500 border border-red-500 hover:bg-red-500 bg-gray-100 hover:text-white;
-  box-shadow: 4px 5px 4px -2px rgba(72, 79, 96, 0.4),
+    @apply text-red-500 border border-red-500 hover:bg-red-500 hover:text-white;
 }
 
 .boton--gris {
-  @apply hover:bg-gray-200 bg-gray-100;
-  box-shadow: 4px 5px 4px -2px rgba(72, 79, 96, 0.4),
+    @apply hover:bg-gray-200 bg-gray-100;
+    box-shadow: 4px 5px 4px -2px rgba(72, 79, 96, 0.4), -6px -6px 12px -1px white;
 }
 
 .label {
-  @apply block uppercase text-xs font-bold mb-6;
+    @apply block uppercase text-xs font-bold mb-6;
 }
 
-// .input {
-//   @apply nm-inset-gray-100 w-full border rounded-xl p-2 focus:outline-none focus:bg-white focus:border-gray-500;
-// }
+.input {
+    @apply w-full border rounded-xl p-2 focus:outline-none focus:bg-white focus:border-gray-500;
+    box-shadow:  -4px -4px 6px -1px white, inset 2px 2px 8px -1px rgba(72, 79, 96, 0.5)
+}
 
-// .botones {
-//   @apply bg-gradient-to-r from-gray-700 via-gray-200 to-gray-200 px-4 py-3 flex justify-between;
-// }
+.botones {
+    @apply bg-gradient-to-r from-gray-700 via-gray-200 to-gray-200 px-4 py-3 flex justify-between;
+}
