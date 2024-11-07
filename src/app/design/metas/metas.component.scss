@@ -1,0 +1,27 @@
+.meta {
+  @apply flex p-2 justify-between;
+}
+
+
+.icono {
+  @apply h-10 w-10 rounded-full flex items-center justify-center text-xl;
+  border-radius: 100%;
+  box-shadow: inset -4px -4px 6px -1px white,
+  inset 2px 2px 8px -1px rgba(72, 79, 96, 0.5);
+  border-color: rgba(255, 255, 255, 0);
+  border: 3px solid rgba(255, 255, 255, 0);
+  background-color: #FFF;
+}
+
+.barra1 {
+  @apply h-1 w-28 rounded bg-blue-200  shadow-gray-300 shadow-md;
+  box-shadow: 1px 1.2px 3px 0px rgba(75, 82, 86, 0.6), -10px -5px 0px -8px white ;
+}
+
+.barra2 {
+  @apply h-1 rounded bg-gradient-to-l from-green-200 to-blue-500;
+}
+
+.tarjeta {
+  @apply rounded-xl m-4 text-gray-700 text-xs mx-4 overflow-hidden bg-white shadow-gray-300 shadow-md h-xl flex p-2 justify-between;
+}

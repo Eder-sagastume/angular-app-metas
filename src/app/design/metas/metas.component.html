@@ -1,0 +1,21 @@
+<div class="tarjeta">
+    <div class="flex items-center">
+        <div class="icono">
+            {{meta.icono}}
+        </div>
+        <p class="text-sm-xl text-md-xl ml-5 mr-10">
+            {{meta.eventos}}
+            <sub class="text-xs text-gray-500 ml-1">/ {{meta.periodo}}</sub>
+        </p>
+        <p>{{meta.detalles}}</p>
+    </div>
+    <div class="flex items-center">
+        <div class="relative m-2 mx-5">
+            <p>{{meta.completado}} de {{meta.meta}}</p>
+            <div class="barra1">
+                <div [style]="'width:'+alcanzado+'%'" class="barra2"></div>
+            </div>
+        </div>
+        <button class="boton boton--gris">Completado</button>
+    </div>
+</div>
