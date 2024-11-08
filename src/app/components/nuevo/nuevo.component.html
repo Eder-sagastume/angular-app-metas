@@ -1,7 +1,60 @@
 <section>
     <div class="tarjeta">
-        <form [formGroup]="formularioDeMetas" class="p-4">
-            
+        <form [formGroup]="formularioDeMetas" class="p-4" (ngSubmit)="llenarMetasEnviar()">
+            <label class="label">
+                Describe tu meta
+                <input
+                    type="text"
+                    class="input"
+                    placeholder="ej. 52 caminatas"
+                    formControlName="detalles"
+                />
+            </label>
+            <label class="label">
+                ¿Con que frecuencia deseas cumplir tu meta? <span>(ej. 1 vez a la semana)</span>
+                <div class="flex mb-6">
+                    <input type="text" class="input mr-6" formControlName="eventos" />
+                    <select class="input" formControlName="periodo">
+                        @for (frecuencia of frecuencias; track frecuencia) {
+                          <option [value]="frecuencia">{{frecuencia}}</option>
+                        }
+                    </select>
+                </div>
+            </label>
+            <label class="label">
+                ¿Cuentas veces deseas completar con la meta?
+                <input type="number" class="input" formControlName="meta">
+            </label>
+            <label class="label">
+                ¿Tienes una fecha límite?
+                <input type="date" class="input" formControlName="plazo">
+            </label>
+            <label class="label">
+                ¿Cuantas veces haz completado ya esta meta?
+                <input type="number" class="input" formControlName="completado">
+            </label>
+            <label class="label">
+                Escoge el ícono para la meta
+                <select class="input" formControlName="icono">
+                    @for (icono of iconos; track icono) {
+                        <option [value]="icono">
+                            {{icono}}
+                        </option>
+                    }
+                </select>
+            </label>
         </form>
+        <div class="botones">
+            @if(!metasIng) {
+              <button class="boton boton--negro" (click)="subirFormulario()">Crear</button>
+            }
+            @if(metasIng) {
+              <button class="boton boton--negro" (click)="actualizarMetas()">Actualizar</button>
+            }
+            @if(metasIng) {
+              <button class="boton boton--rojo" (click)="eliminarMetas()">Borrar</button>
+            }
+            <button class="boton boton--gris">Cancelar</button>
+        </div>
     </div>
 </section>

@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-vinculos',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './vinculos.component.html',
   styleUrl: './vinculos.component.scss'
 })

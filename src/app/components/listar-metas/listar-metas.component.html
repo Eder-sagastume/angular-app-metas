@@ -1,3 +1,7 @@
 @for (meta of listaDeMetas; track meta.id) {
   <app-metas [meta]="meta"></app-metas>
 }
+<h3 class="p-4"> Listar metas desde el backend</h3>
+@for (meta of listaDeMetasBack; track meta.id) {
+  <app-metas [meta]="meta"></app-metas>
+}

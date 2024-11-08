@@ -1,4 +1,4 @@
-<div class="tarjeta">
+<div class="tarjeta cursor-pointer" (click)="editarMeta(meta)">
     <div class="flex items-center">
         <div class="icono">
             {{meta.icono}}
@@ -11,7 +11,9 @@
     </div>
     <div class="flex items-center">
         <div class="relative m-2 mx-5">
-            <p>{{meta.completado}} de {{meta.meta}}</p>
+            <p class="text-center">
+              {{meta.completado}} de {{meta.meta}}
+            </p>
             <div class="barra1">
                 <div [style]="'width:'+alcanzado+'%'" class="barra2"></div>
             </div>
